@@ -1,4 +1,4 @@
-🚀#<h1 align=center> **ETAPA DE LABS** </h1>🚀
+#<h1 align=center> 🚀**ETAPA DE LABS** 🚀</h1>
 # <h1 align=center> **PROYECTO INDIVIDUAL 1** </h1>
 # <h2 align=center> **Sergio Andrés Piratoba Forero** </h2>
 
