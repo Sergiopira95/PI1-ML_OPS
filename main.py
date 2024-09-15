@@ -155,13 +155,14 @@ tfidf_matriz_5 = tfidf_5.fit_transform(model5['genres'] + ' ' + model5['tagline'
 @app.get('/recomendacion/{titulo}', name = "Sistema de recomendación")
 async def recomendacion(titulo):
     '''Se ingresa el título de una película, por ejemplo "Avatar", y devuelve 5 recomendaciones.'''
+    titulo = titulo.lower()
     #Crear una serie que asigna un índice a cada título de las películas
-    indices = pd.Series(model5.index, index=model5['title']).drop_duplicates()
-    if titulo not in indices:
+    movies = pd.Series(model5['title'].str.lower(), index=model5.index).drop_duplicates()
+    if titulo not in movies:
         return 'La película ingresada no se encuentra en la base de datos'
     else:
         #Obtener el índice de la película que coincide con el título
-        ind = pd.Series(indices[titulo]) if titulo in indices else None
+        ind = pd.Series(movies[titulo]) if titulo in movies else None
         #Si el título de la película está duplicado, devolver el índice de la primera aparición del título en el DataFrame
         if model5.duplicated(['title']).any():
             primer_ind = model5[model5['title'] == titulo].index[0]
