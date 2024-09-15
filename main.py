@@ -143,6 +143,7 @@ def get_director(nombre_director: str):
 
 
 #Machine Learning
+model5['title'] = model5['title'].str.lower()
 #Se separan los géneros y se convierten en palabras individuales
 model5['genres'] = model5['genres'].fillna('').apply(lambda x: ' '.join(x.replace(',', ' ').replace('-', '').lower().split()))
 #Se separan los slogans y se convierten en palabras individuales
