@@ -9,8 +9,8 @@ from typing import Optional
 app = FastAPI(title="& opsciones de consulta al alcance de un click", description="El mejor sistema de recomendación de pelis...",
                docs_url="/docs")
 #Cargue de datos
-df = pd.read_parquet('../datasets/API_data.parquet')
-model5 = pd.read_parquet('../datasets/movies_model5.parquet')
+df = pd.read_parquet('API_data.parquet')
+model5 = pd.read_parquet('movies_model5.parquet')
 
 #Página bienvenida
 @app.get("/")
