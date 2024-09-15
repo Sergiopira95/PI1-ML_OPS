@@ -153,7 +153,7 @@ tfidf_5 = TfidfVectorizer(stop_words="english", ngram_range=(1, 2))
 tfidf_matriz_5 = tfidf_5.fit_transform(model5['genres'] + ' ' + model5['tagline'] + ' ' + model5['first_actor']+ ' ' + model5['first_director'])
 #Función para obtener recomendaciones
 @app.get('/recomendacion/{titulo}', name = "Sistema de recomendación")
-async def recomendacion(titulo):
+async def recomendacion(titulo: str):
     '''Se ingresa el título de una película, por ejemplo "Avatar", y devuelve 5 recomendaciones.'''
     titulo = titulo.lower()
     #Crear una serie que asigna un índice a cada título de las películas
