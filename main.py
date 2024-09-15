@@ -74,8 +74,8 @@ def score_titulo(titulo: str):
 
     # Obtenemos el título, año de estreno y score
     titulo = film.iloc[0]['title']
-    anio = film.iloc[0]['release_date'].year
-    score = film.iloc[0]['score']
+    anio = film.iloc[0]['release_year']
+    score = film.iloc[0]['vote_average']
 
     return {f"La película {titulo} fue estrenada en el año {anio} con un score de {score}"}
 
@@ -89,8 +89,8 @@ def votos_titulo(titulo: str):
         raise HTTPException(status_code=404, detail="Película no encontrada.")
 
     # Obtenemos el número de votos y el promedio de los votos
-    votos = film.iloc[0]['votes']
-    promedio_votos = film.iloc[0]['score']
+    votos = film.iloc[0]['vote_count']
+    promedio_votos = film.iloc[0]['vote_average']
 
     # Verificamos si la película tiene al menos 2000 valoraciones
     if votos < 2000:
@@ -102,7 +102,7 @@ def votos_titulo(titulo: str):
 @app.get('/get_actor/{nombre_actor}')
 def get_actor(nombre_actor: str):
     # Filtramos el dataset para obtener las películas en las que ha participado el actor
-    films_with_actor = df[df['cast'].apply(lambda x: nombre_actor in x)]
+    films_with_actor = df[df['actors'].apply(lambda x: nombre_actor in x)]
 
     if films_with_actor.empty:
         raise HTTPException(status_code=404, detail="Actor no encontrado.")
@@ -122,7 +122,7 @@ def get_actor(nombre_actor: str):
 @app.get('/get_director/{nombre_director}')
 def get_director(nombre_director: str):
     # Filtramos el dataset para obtener las películas dirigidas por el director
-    films_by_director = df[df['director'] == nombre_director]
+    films_by_director = df[df['directors'] == nombre_director]
 
     if films_by_director.empty:
         raise HTTPException(status_code=404, detail="Director no encontrado.")
