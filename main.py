@@ -102,7 +102,7 @@ def votos_titulo(titulo: str):
 @app.get('/get_actor/{nombre_actor}')
 def get_actor(nombre_actor: str):
     # Filtramos el dataset para obtener las películas en las que ha participado el actor
-    films_with_actor = df[df['actors'].apply(lambda x: nombre_actor in x)]
+    films_with_actor = df[df['actors'].str.contains(nombre_actor, case=False, na=False)]
 
     if films_with_actor.empty:
         raise HTTPException(status_code=404, detail="Actor no encontrado.")
@@ -122,7 +122,7 @@ def get_actor(nombre_actor: str):
 @app.get('/get_director/{nombre_director}')
 def get_director(nombre_director: str):
     # Filtramos el dataset para obtener las películas dirigidas por el director
-    films_by_director = df[df['directors'] == nombre_director]
+    films_by_director = df[df['directors'].str.contains(nombre_director, case=False, na=False)]
 
     if films_by_director.empty:
         raise HTTPException(status_code=404, detail="Director no encontrado.")
