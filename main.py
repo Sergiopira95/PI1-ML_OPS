@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from typing import Optional
 
 # Inicializamos la aplicación FastAPI
-app = FastAPI(title="& opsciones de consulta al alcance de un click", description="El mejor sistema de recomendación de pelis...",
+app = FastAPI(title="Opciones de consulta al alcance de un click", description="El mejor sistema de recomendación de pelis...",
                docs_url="/docs")
 #Cargue de datos
 df = pd.read_parquet('API_data.parquet')
