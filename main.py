@@ -177,4 +177,4 @@ async def recomendacion(titulo: str):
         #Obtener los títulos de las películas más similares utilizando el índice de cada película
         recomendaciones = model5.iloc[valid_ind]['title'].tolist()
         #Devolver la lista de títulos de las películas recomendadas
-        return recomendaciones1
+        return recomendaciones
