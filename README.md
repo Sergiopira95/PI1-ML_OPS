@@ -18,5 +18,14 @@ Al sumergirme en los datos de la start-up, descubro que la madurez de los datos 
 Mi objetivo es empezar desde cero y construir un MVP (Minimum Viable Product) que sea funcional en las próximas semanas. Sí, el camino será desafiante y exigente, pero se qué hacer Con un enfoque claro y una estrategia bien definida, me enfrentaré a este reto con determinación 💪 y lograré convertir el modelo teórico en una herramienta valiosa para la start-up.
 
 ¡Estoy listo para trabajar duro y transformar datos crudos en un sistema de recomendación listo para el mundo real! 🌟📈
+## :white_check_mark: ```Objetivo General```
+
+- :pushpin: Implementar una API para acceso a datos y recomendaciones.
+
+## :white_check_mark: ```Objetivos Específicos ```
+
+- :pushpin: Llevar acabo el procesamiento de los datos para prepararlos y limpiarlos para la ingesta al modelo (ETL).
+- :pushpin: Realizar el análisis exploratoorio de los datos para reconocer patrones que ayuden a tomar decisiones. (EDA).
+- :pushpin: Crear endpoints de API que permitan consultas específicas y recomendacion de películas basada en el contenido.
 
 
