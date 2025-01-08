@@ -37,7 +37,7 @@ Para llevar a cabo los objetivos, se ejecutaron los siguientes procedimientos:
 
 Los endpoints desarrollados fueron: 
 
-- ```def cantidad_peliculas_mes(mes)```: Se ingresa el mes en minúscula, por ejemplo abril, y la función retorna la cantidad de películas que se estrenaron en ese mes
+- ```def cantidad_peliculas_mes(mes)```: Se ingresa el mes en minúscula, por ejemplo junio, y la función retorna la cantidad de películas que se estrenaron en ese mes
     
         Formato de salida: En el mes de {mes} se estrenaron {cantidad} películas
 
@@ -46,12 +46,12 @@ Los endpoints desarrollados fueron:
 
         Formato de salida: En el día {dia} se estrenaron {cantidad} películas
 
-- ```def score_titulo(titulo)```: Se ingresa el título de una película, por ejemplo "Titanic", y se retorna el título, el año de estreno y el score.
+- ```def score_titulo(titulo)```: Se ingresa el título de una película, por ejemplo "Avatar", y se retorna el título, el año de estreno y el score.
     
 
         Formato de salida: "Título de la película": resultado['title'], "Año": resultado['release_year'], "Puntaje": resultado['vote_average']
 
-- ```def votos_titulo(titulo)```: Se ingresa el título de una película, por ejemplo "Titanic", y se retorna el título, el año de estreno y el score.
+- ```def votos_titulo(titulo)```: Se ingresa el título de una película, por ejemplo "Fast and Furious", y se retorna el título, el año de estreno y el score.
 
         Formato de salida: {
                 'Título de la película': titulo, 
@@ -60,7 +60,7 @@ Los endpoints desarrollados fueron:
                  'Voto promedio': voto_prom
                                   }
 
-- ```def get_actor(nombre_actor)```: Se ingresa el nombre de un actor, por ejemplo "Tom Hanks" y se retorna su éxito medido a través del retorno, cantidad de películas y promedio de retorno.
+- ```def get_actor(nombre_actor)```: Se ingresa el nombre de un actor, por ejemplo "Jaime Foxx" y se retorna su éxito medido a través del retorno, cantidad de películas y promedio de retorno.
     
 
         Formato de salida: {
@@ -69,7 +69,7 @@ Los endpoints desarrollados fueron:
         "Retorno Total": total_retorno,
         "Retorno Promedio": promedio_retorno}
 
-- ```def get_director(nombre_director)```: Se ingresa el nombre de un director y se retorna su éxito medido a través del retorno, nombre de cada película, fecha de lanzamiento, retorno individual, costo y ganancia.
+- ```def get_director(nombre_director)```: Se ingresa el nombre de un director por ejemplo "Cristopher Nolan" y se retorna su éxito medido a través del retorno, nombre de cada película, fecha de lanzamiento, retorno individual, costo y ganancia.
     
         Formato de salida: {
         "Director": nombre_director,
